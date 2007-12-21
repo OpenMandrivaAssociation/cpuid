@@ -8,6 +8,7 @@ License:	BSD
 Source:		cpuid-%{snapshot}.src.tar.bz2
 Group:		System/Kernel and hardware
 URL:		http://www.etallen.com
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Cpuid dumps detailed information about the CPU(s) gathered from the
