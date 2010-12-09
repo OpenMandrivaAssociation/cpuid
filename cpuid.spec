@@ -3,7 +3,7 @@
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
 Version:	1.0
-Release:	%mkrel 0.%{snapshot}.2
+Release:	%mkrel 0.%{snapshot}.3
 License:	BSD
 Source:		cpuid-%{snapshot}.src.tar.gz
 Group:		System/Kernel and hardware
