@@ -1,9 +1,9 @@
-%define snapshot 20060917
+%define snapshot 20110305
 
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
 Version:	1.0
-Release:	%mkrel 0.%{snapshot}.3
+Release:	%mkrel 0.%{snapshot}.1
 License:	BSD
 Source:		cpuid-%{snapshot}.src.tar.gz
 Group:		System/Kernel and hardware
