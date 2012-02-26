@@ -1,14 +1,13 @@
-%define snapshot 20110305
+%define snapshot 20120225
 
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
 Version:	1.0
 Release:	%mkrel 0.%{snapshot}.1
 License:	BSD
-Source:		cpuid-%{snapshot}.src.tar.gz
+Source0:	cpuid-%{snapshot}.src.tar.gz
 Group:		System/Kernel and hardware
 URL:		http://www.etallen.com
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Cpuid dumps detailed information about the CPU(s) gathered from the
@@ -23,15 +22,11 @@ UMC, NexGen, and Rise CPUs.
 make
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir} \
 	%{buildroot}%{_mandir}/man1
 
 install -m 755 cpuid %{buildroot}%{_bindir}
 install -m 644 cpuid.man %{buildroot}%{_mandir}/man1/cpuid.1
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
