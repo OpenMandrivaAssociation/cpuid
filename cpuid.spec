@@ -1,4 +1,4 @@
-%define snapshot 20120225
+%define snapshot 20120601
 
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
