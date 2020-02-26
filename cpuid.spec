@@ -1,11 +1,11 @@
-%define snapshot 20120601
+%define snapshot 20200211
 
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
-Version:	1.0
-Release:	%mkrel 0.%{snapshot}.1
+Version:	20200211
+Release:	1
 License:	BSD
-Source0:	cpuid-%{snapshot}.src.tar.gz
+Source0:	http://www.etallen.com/%{name}/%{name}-%{version}.src.tar.gz
 Group:		System/Kernel and hardware
 URL:		http://www.etallen.com
 
@@ -16,25 +16,20 @@ supports Intel, AMD, and VIA CPUs, as well as older Transmeta, Cyrix,
 UMC, NexGen, and Rise CPUs.
 
 %prep
-%setup -q -n %{name}-%{snapshot}
+%setup -q
 
 %build
-make
+%make_build
 
 %install
-mkdir -p %{buildroot}%{_bindir} \
-	%{buildroot}%{_mandir}/man1
-
-install -m 755 cpuid %{buildroot}%{_bindir}
-install -m 644 cpuid.man %{buildroot}%{_mandir}/man1/cpuid.1
+install -Dp -m 0755 %{name} %{buildroot}%{_bindir}/%{name}
+install -Dp -m 0644 %{name}.man %{buildroot}%{_mandir}/man1/%{name}.1
 
 %files
-%defattr(-,root,root)
-%doc ChangeLog FUTURE LICENSE
-%{_bindir}/cpuid
-%{_mandir}/man1/cpuid.1*
-
-
+%doc ChangeLog FUTURE
+%license LICENSE
+%{_mandir}/man1/%{name}.1*
+%{_bindir}/%{name}
 
 %changelog
 * Fri Jul 20 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0-0.20120601.1mdv2012.0
