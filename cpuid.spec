@@ -1,3 +1,4 @@
+%define _empty_manifest_terminate_build 0
 %define snapshot 20200211
 
 Summary:	Dumps CPUID information about the CPU(s)
