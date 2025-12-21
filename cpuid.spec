@@ -9,6 +9,7 @@ Source0:	https://www.etallen.com/%{name}/%{name}-%{version}.src.tar.gz
 Group:		System/Kernel and hardware
 URL:		https://www.etallen.com
 
+BuildRequires:	make
 %description
 Cpuid dumps detailed information about the CPU(s) gathered from the
 CPUID instruction, and also determines the exact model of CPU(s). It
