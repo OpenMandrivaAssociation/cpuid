@@ -2,7 +2,7 @@
 
 Summary:	Dumps CPUID information about the CPU(s)
 Name:		cpuid
-Version:	20250316
+Version:	20260503
 Release:	1
 License:	BSD
 Source0:	https://www.etallen.com/%{name}/%{name}-%{version}.src.tar.gz
